@@ -65,7 +65,6 @@ $(document).ready(function () {
             $('.dollar-display').show();
             $('.month').each(function (index, monthSalary) {
                 monthSalary.placeholder = baseUsdMount;
-                monthSalary.step = '100';
             });
             document.getElementById('salary-period').placeholder = baseUsdMount;
         } else {
@@ -74,7 +73,6 @@ $(document).ready(function () {
             $('#salary-period').placeholder = baseCrcMount;
             $('.month').each(function (index, monthSalary) {
                 monthSalary.placeholder = baseCrcMount;
-                monthSalary.step = '10000';
             });
             document.getElementById('salary-period').placeholder = baseCrcMount;
         }
