@@ -30,11 +30,18 @@ $(document).ready(function () {
             aguinaldoColonesTotal = salariesTotal / 12;
             $('#aguinaldo-total-colones').html(aguinaldoColonesTotal.toLocaleString('en'));
         }
+
+        salariesTotal = 0;
+        aguinaldoColonesTotal = 0;
+        aguinaldoDollarsTotal = 0;
     });
 
     $('#calculator-reset').click(function (e) {
         e.preventDefault();
+
         document.getElementById('calculator').reset()
+
+        $("#salary-period").val('');
         $('#aguinaldo-total-dollars').html(baseMoneyMount);
         $('#aguinaldo-total-colones').html(baseMoneyMount)
     });
@@ -48,7 +55,7 @@ $(document).ready(function () {
 
         addSalaryToMultipleMonths(from, to, salary);
 
-        $('#exampleModal').modal('hide');
+        $('#modal-salary').modal('hide');
     });
 
     $('#dollar-toggle').change(function (e) {
