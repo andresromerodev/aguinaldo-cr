@@ -60,7 +60,6 @@ $(document).ready(function () {
                 monthSalary.placeholder = baseUsdMount;
                 monthSalary.step = '100';
             });
-            // Amount field in modal (dollars)
             document.getElementById('salary-period').placeholder = baseUsdMount;
         } else {
             dollarEnabled = false;
@@ -70,7 +69,6 @@ $(document).ready(function () {
                 monthSalary.placeholder = baseCrcMount;
                 monthSalary.step = '10000';
             });
-            // Amount field in modal (colones)
             document.getElementById('salary-period').placeholder = baseCrcMount;
         }
     });
