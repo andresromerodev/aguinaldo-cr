@@ -1,9 +1,16 @@
+/*
+ * Copyright (c) 2020 Andrés Romero
+ * The accompanying program is provided under the terms of MIT License ("agreement").
+ * Written by Andres Romero <andresromeroh,cr@gmail.com>, November 2020.
+*/
 var dollarEnabled = false;
 var dollarExchange = 0;
 var salariesTotal = 0;
 var aguinaldoColonesTotal = 0;
 var aguinaldoDollarsTotal = 0;
 var baseMoneyMount = '0.00';
+var baseUsdMount = 'USD 0.00'
+var baseCrcMount = 'CRC 0.00';
 
 $(document).ready(function () {
     $('#calculator').submit(function (e) {
@@ -50,14 +57,14 @@ $(document).ready(function () {
             dollarEnabled = true;
             $('.dollar-display').show();
             $('.month').each(function (index, monthSalary) {
-                monthSalary.placeholder = 'USD 0.00';
+                monthSalary.placeholder = baseUsdMount;
                 monthSalary.step = '100';
             });
         } else {
             dollarEnabled = false;
             $('.dollar-display').hide();
             $('.month').each(function (index, monthSalary) {
-                monthSalary.placeholder = 'CRC 0.00';
+                monthSalary.placeholder = baseCrcMount;
                 monthSalary.step = '10000';
             });
         }
