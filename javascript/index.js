@@ -13,6 +13,8 @@ var baseUsdMount = 'USD 0.00'
 var baseCrcMount = 'CRC 0.00';
 
 $(document).ready(function () {
+    $('#december-label').text('Diciembre (' + ((new Date().getFullYear()) - 1) + ')');
+
     $('#calculator').submit(function (e) {
         e.preventDefault();
 
