@@ -11,9 +11,11 @@ var aguinaldoDollarsTotal = 0;
 var baseMoneyMount = '0.00';
 var baseUsdMount = 'USD 0.00'
 var baseCrcMount = 'CRC 0.00';
+var currentFirstMonth = 'Diciembre (' + ((new Date().getFullYear()) - 1) + ')';
 
 $(document).ready(function () {
-    $('#december-label').text('Diciembre (' + ((new Date().getFullYear()) - 1) + ')');
+    $('#december-label').text(currentFirstMonth);
+    document.getElementById('select-from').options[0].innerText = currentFirstMonth;
 
     $('#calculator').submit(function (e) {
         e.preventDefault();
