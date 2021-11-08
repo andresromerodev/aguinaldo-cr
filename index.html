@@ -57,7 +57,7 @@
         <h1>Calculadora de Aguinaldo</h1>
         <p class="lead">En las siguientes casillas digite el salario bruto obtenido en cada mes
             según corresponda (Salario Bruto: Salario que incluye horas extras, comisiones, bonificaciones, sin
-            rebajas de cargas sociales ni renta) o bien utilice la opción "Agregar por Período".</p>
+            rebajas de cargas sociales ni renta) o bien utilice la opción "Agregar Varios".</p>
         <div class="ml-1">
             <small><b>* Este sitio no almacena su información.</b></small>
         </div>
@@ -66,17 +66,20 @@
         <div class="row">
             <div class="form-group mx-3">
                 <button class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modal-salary" href="#"
-                    role="button">Agregar por Período</button>
+                    role="button">Agregar Varios</button>
             </div>
 
-            <div class="form-group mx-3 my-2">
+            <div class="form-group mx-4 my-2">
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="dollar-toggle">
                     <label class="custom-control-label" for="dollar-toggle">Salario en Dólares</label>
                 </div>
             </div>
+        </div>
 
-            <div class="form-group dollar-display mx-3">
+        <div class="row">
+            <div class="form-group dollar-display mx-3 my-2">
+                <label for="exchange-input">Tipo de Cambio (Banco Central de Costa Rica):</label>
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
                         <span class="input-group-text">₡</span>
@@ -191,7 +194,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Salario por Período</h5>
+                        <h5 class="modal-title">Agregue Uno o Más Meses Por Período</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
